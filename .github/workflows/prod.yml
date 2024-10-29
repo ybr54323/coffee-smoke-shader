@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      WORKDIR: /www/wwwroot/coffee-smoke-shader
+      WORKDIR: /www/wwwroot/examples/coffee-smoke-shader
 
     strategy:
       matrix:
@@ -55,6 +55,6 @@ jobs:
           password: ${{ secrets.PRODUCTION_SERVER_PASSWORD }}
           port: 22
           script: |
-            cd /www/wwwroot/coffee-smoke-shader
+            cd /www/wwwroot/examples/coffee-smoke-shader
             tar -xzvf ./dist.tar.gz -C . --strip-components=1
             rm -f dist.tar.gz
